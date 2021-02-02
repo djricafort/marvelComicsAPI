@@ -30,7 +30,8 @@ This is an implementation of the Marvel Comics API which allows a user to get al
 6. The public and private keys from your Marvel Comic API will be used as header inputs in postman to run the requests.
 ```bash
 {
-privatekey: <marvel api private key>,
-publickey: <marvel api public key>
+   privatekey: <marvel api private key>,
+   publickey: <marvel api public key>
 }
 ```
+A copy of the documentation of the API endpoints used in this project is also published in [SwaggerHub](https://app.swaggerhub.com/apis/djricafort/marvel-comics_api/1.0.0)
