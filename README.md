@@ -14,7 +14,7 @@ This is an implementation of the Marvel Comics API which allows a user to get al
   * The Marvel API only returns a max of 100 records per request.
   * A caching solution was implemented using Redis.
   * The caching solution for the `/character` endpoint checks if the request is sent for the first time. If yes, it will send a `GET` request until all of the characters are saved in the cache. The date when the last request was sent will also be stored in the cache.
-  * For the succeeding times that the `/character` endpoint is called, the date when the enpoint is called will be compared against the date when it was last called which is stored in the cache. If the current date is equal to the date of the last request, the character IDs that is stored in the cache will be sent back as the response. The pseudocode below is a representation of how this is implemented in the code.
+  * For the succeeding times that the `/character` endpoint is called, the date when the endpoint is called will be compared against the date when it was last called which is stored in the cache. If the current date is equal to the date of the last request, the character IDs that is stored in the cache will be sent back as the response. The pseudocode below is a representation of how this is implemented in the code.
 ```bash
     if(dateToday == dateOfLastRequest){
       getCharacterIdsFromCache();
